@@ -13,7 +13,7 @@ const Feed = () => {
     ]);
 
     useEffect(() => {
-        axios.get("http://localhost:9898/fetch/data")
+        axios.get(`${import.meta.env.VITE_API_URL}/fetch/data`)
             .then((res) => {
                 setPosts(res.data.data);
             })

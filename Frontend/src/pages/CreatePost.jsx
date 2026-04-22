@@ -10,7 +10,7 @@ const CreatePost = () => {
     try {
       const formData = new FormData(e.target);
       const res = await axios.post(
-        "http://localhost:9898/create-post",
+        `${import.meta.env.VITE_API_URL}/create-post`,
         formData,
         {
           headers: {
